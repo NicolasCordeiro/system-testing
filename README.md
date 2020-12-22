@@ -1,2 +1,8 @@
 # impacta-system-testing
-System testing with java for Impacta studients
+Projeto para testes de sistema.
+
+Engenharia de Software - ES-19 - Automação de Testes
+
+Guilherme dos Santos 1903782
+
+Nicolas Cordeiro 1903227
