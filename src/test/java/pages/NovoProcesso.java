@@ -8,6 +8,12 @@ public class NovoProcesso extends BasePage{
         super(stepDriver);
     }
 
+    private String codigo;
+
+    public String getCodigo(){ return codigo; }
+
+    public void setCodigo(String codigo){ this.codigo = codigo; }
+
     public void preencherCampo(String field, String value) {
 
         switch (field)
@@ -30,7 +36,7 @@ public class NovoProcesso extends BasePage{
             case "arbitramento":
                 preencherArbitramento(value);
                 break;
-            case "assistencia social":
+            case "assistente social":
                 preencherInput("processo_assistente_social", value);
                 break;
             case "data entrada":
@@ -43,14 +49,14 @@ public class NovoProcesso extends BasePage{
     }
 
     private void preencherUrgente(String valor) {
-        if(valor.toLowerCase().equals("sim"))
-            driver.click("processo_arbitramento_s");
-        else
-            driver.click("#processo_arbitramento_n","css");
+        driver.selectByText(valor,"processo_urgente");
     }
 
     private void preencherArbitramento(String valor) {
-        driver.selectByText(valor,"processo_urgente");
+        if(valor.toLowerCase().equals("sim"))
+            driver.click("processo_arbitramento_s");
+        else
+            driver.click("processo_arbitramento_n");
     }
 
     private void preencherInput(String elemento, String valor) {
@@ -58,5 +64,13 @@ public class NovoProcesso extends BasePage{
     }
     public void clickSave() {
         driver.click("btn-save");
+    }
+
+    public void clickEditProcess(String codigo) {
+        driver.click(".ls-btn","css");
+    }
+
+    public void clickBack() {
+        driver.click("Voltar","link");
     }
 }

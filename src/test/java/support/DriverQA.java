@@ -93,6 +93,7 @@ public class DriverQA {
         try {
             element = driver.findElement(locator);
         } catch (NoSuchElementException e) {
+            e.printStackTrace();
             element = null;
         }
         return element;
