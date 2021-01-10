@@ -71,3 +71,10 @@ Funcionalidade: CRUD de Processos
     E o usuário informar no campo "natureza" o valor "Natureza Editada"
     Quando o usuário clicar em salvar
     Então o usuário deveria ver a mensagem "Processo atualizado com sucesso."
+
+  Cenário: Deletar um processo criado
+    Quando o usuário clicar em salvar
+    E o usuário deveria ver a mensagem "Processo foi criado com sucesso."
+    E o usuário clicar no botão voltar
+    Quando o usuário clicar em apagar
+    Então o usuário deve clicar em ok para confirmar a deleção

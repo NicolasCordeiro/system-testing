@@ -70,4 +70,13 @@ public class ProcessoSteps extends BaseSteps {
     public void oUsuárioClicarNoBotãoVoltar() {
         novoProcesso.clickBack();
     }
+
+    @Quando("^o usuário clicar em apagar$")
+    public void oUsuárioClicarEmApagar() {
+        listaProcessos.clickDelete(novoProcesso.getCodigo());
+    }
+
+    @Então("^o usuário deve clicar em ok para confirmar a deleção$")
+    public void oUsuárioDeveClicarEmOkParaConfirmarADeleção() {
+    }
 }

@@ -15,4 +15,8 @@ public class ListaProcessos extends BasePage{
     public void clickShowProcess(String codigo) {
         driver.click("btn-show_"+codigo);
     }
+
+    public void clickDelete(String codigo) {
+        driver.click("btn-delete_"+codigo);
+    }
 }

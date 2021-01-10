@@ -50,4 +50,5 @@ public class UserSteps extends BaseSteps {
     public void oUsuarioDeveriaVerAMensagem(String message){
         Assert.assertEquals(message,detalheUsuario.getNotice());
     }
+
 }
